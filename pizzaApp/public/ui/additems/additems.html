@@ -1,0 +1,92 @@
+<div class="col-md-12" ng-controller="AdditemsCtrl">
+<div class="container">
+  <p class="fontHeading">Pizza World...</p>
+  </div>
+  <div class="bs-example">
+  
+  <ul class="nav nav-tabs">
+        <li   ><a href="#/adminPage"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+        <li class="active"><a href="#/additems"><span class="glyphicon glyphicon-folder-open"></span>AddItem</a></li>
+        
+
+    </ul>
+
+
+</div>
+<div class="col-md-4 col-md-offset-4">
+<p class="fontSubHeading">  Add Items</p>
+
+ <div class="jumbotron">
+<form name="form" ng-submit="save(details)">
+
+<div  class="form-group">
+
+<input type="text" 
+	name="name" 
+	ng-model="details.name" 
+	 placeholder="Name"/>
+     
+</div>
+<div  class="form-group">
+
+<input type="number" 
+	name="price" 
+	ng-model="details.price" 
+	 placeholder="price"/>
+     
+</div>
+
+<div  class="form-group">
+
+     <textarea ng-model="details.description" 
+     rows="8" cols="30"
+      placeholder="Description" 
+      name="description"></textarea>
+     
+     
+     </div>
+
+     <div  class="form-group">
+
+     <input type="radio" 
+     name="type"
+      ng-model="details.type"
+      value="veg" />
+     Veg
+     <input type="radio"
+      name="type" 
+      ng-model="details.type"
+       value="nonveg" />
+     Non Veg
+     
+     </div>
+     <div class="form-group">
+     <input type="radio"
+      name="category" 
+      ng-model="details.category" 
+      value="personal" />
+     Personal
+     <input type="radio"
+     name="category" 
+     ng-model="details.category" 
+     value="medium" />
+     Medium
+     <input type="radio"
+     name="category" 
+     ng-model="details.category" 
+     value="large" />
+     Large
+     
+     </div>
+     <div class="form-group">
+     <input type="file"
+     ng-model="details.image"
+     name="image" id="image"/>
+     </div>
+	<div class="button"><input type="submit" class="btn btn-primary btn-xs"   name="submit" value="Add"></div>
+
+	</form>
+  </div>
+  </div>
+
+</div>
